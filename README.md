@@ -1,41 +1,44 @@
 # Netflix Data Analysis Project
 
-## 📌 Project Overview
+## Project Overview
 
-This is a beginner Data Science project built using Python, Pandas and Matplotlib.
+This project analyzes Netflix data using Python, Pandas, and Matplotlib.
 
-The project analyzes Netflix data and creates simple visualizations.
+## Tools Used
 
-## 🛠️ Technologies Used
+- Python
+- Pandas
+- Matplotlib
+- Git
+- GitHub
+- VS Code
 
-* Python
-* Pandas
-* Matplotlib
-* VS Code
-* Git
-* GitHub
+## Dataset Used
 
-## 📊 Features
+- netflix_titles.csv
 
-* Load Netflix dataset
-* Analyze Movies vs TV Shows
-* Create graphs
-* Explore Netflix content data
+## Analysis Performed
 
-## 📁 Project Structure
+1. Top 10 Countries on Netflix
+2. Movies vs TV Shows
+3. Release Year Trend
+4. Top 10 Ratings
 
-Netflix_Project
+## Files
 
-├── data
+- main.py
+- README.md
+- top10_countries.png
+- movies_vs_tv.png
+- release_year_trend.png
+- top_ratings.png
 
-│ ├── students.csv
+## How to Run
 
-│ └── netflix_titles.csv
+```bash
+python main.py
+```
 
-├── main.py
+## Author
 
-└── README.md
-
-## 🚀 Learning Goal
-
-This project is part of my Data Science internship preparation journey.
+Kartik

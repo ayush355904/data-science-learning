@@ -39,4 +39,3 @@ Netflix_Project
 ## 🚀 Learning Goal
 
 This project is part of my Data Science internship preparation journey.
-

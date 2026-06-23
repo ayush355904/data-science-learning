@@ -1,23 +1,29 @@
 import pandas as pd
-df = pd.read_csv("data/netflix_titles.csv")
-print(df.head())
-print(df.columns)
-print(df.shape)
-print(df.info())
-movies = df [df['type'] == "Movie"]
-print("Movies:",len(movies))
-shows = df[df["type"] == "TV Show"]
-
-print("TV Shows:", len(shows))
-print(df["country"].value_counts().head())
 import matplotlib.pyplot as plt
 
-df["type"].value_counts().plot(kind="bar")
+df = pd.read_csv("data/netflix_titles.csv")
 
-plt.title("Movies vs TV Shows")
+# clean country data
+countries = df["country"].dropna().str.split(",").explode()
 
-plt.xlabel("Type")
+top_countries = countries.value_counts().head(10)
 
-plt.ylabel("Count")
+print(top_countries)
+
+plt.figure(figsize=(10,5))
+
+top_countries.plot(kind="bar")
+
+plt.title("Top 10 Countries on Netflix")
+
+plt.xlabel("Country")
+
+plt.ylabel("Number of Shows")
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+
+plt.savefig("top10_countries.png", dpi=300, bbox_inches="tight")
 
 plt.show()
